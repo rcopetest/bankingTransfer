@@ -1,0 +1,23 @@
+package com.eintern.corejava.objects;
+
+public class FinalizeExample {
+	private static class Finalizer {
+		private int num;
+		
+		public Finalizer(int num){
+			this.num = num;
+		}
+		
+		@Override
+		protected void finalize() throws Throwable {
+			System.out.println("Finalize on " + num);
+		} 
+	}
+	public static void main(String[] args) {
+		for (int i=0; i<1000000; ++i)
+			new Finalizer(i);
+		
+		}
+	}
+
+

@@ -1,0 +1,7 @@
+package BankOfJEE;
+
+public class Receipt {
+	ArrayList transactionID = 
+	
+	withdrawalTransaction()
+}

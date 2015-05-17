@@ -1,0 +1,17 @@
+package BankOfJEE;
+
+import CustomersOfBOJEE.Customer;
+
+public class SavingsAccount extends Account{
+
+	public SavingsAccount(double pin, int accountID, Customer customer) {
+		super(pin, accountID, customer);
+	}
+
+	@Override
+	void accrueInterest() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

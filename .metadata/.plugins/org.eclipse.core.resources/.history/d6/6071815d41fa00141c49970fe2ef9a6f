@@ -1,0 +1,45 @@
+package BankOfJEE;
+
+import CustomersOfBOJEE.Customer;
+
+public abstract class Account {
+	private double balance;
+	private double pin;
+	private int accountID;
+	Customer customer;
+
+	public Account(double pin, int accountID, Customer customer) {
+		super();
+		this.pin = pin;
+		this.accountID = accountID;
+		this.balance = 0;
+		this.customer = customer;
+	}
+
+	abstract void accrueInterest();
+
+	boolean withdrawAmount(double amount) {
+		if (amount > 0) {
+			updateBalance(amount);
+			return true;
+		}
+		return false;
+	}
+
+	boolean depositeAmount(double amount) {
+		if (amount < 0) {
+			updateBalance(amount);
+			return true;
+		}
+		return false;
+	}
+
+	private double updateBalance(double amount) {
+		return balance = balance + amount;
+	}
+
+	public double getBalance() {
+		return balance;
+		
+	}
+}

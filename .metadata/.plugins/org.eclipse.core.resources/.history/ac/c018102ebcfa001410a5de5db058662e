@@ -1,0 +1,33 @@
+import org.junit.Test;
+import org.mockito.Mockito;
+
+import static org.junit.Assert.*;
+import BankOfJEE.ATM;
+import BankOfJEE.Bank;
+import BankOfJEE.CheckingAccount;
+
+public class ATMTest {
+	
+	
+	@Test
+	public void testIfATMCanCheckBalance(){
+		/*
+		 * Setup
+		 */
+		//create an instance of ATM
+		ATM atm = new ATM();
+		//create a mock instance of bank
+		Bank bank = Mockito.mock(Bank.class);
+		//this will be the balance and expected result
+		
+		CheckingAccount ca = Mockito.mock(CheckingAccount.class);
+		double currentBalance = 1234;
+		Mockito.doReturn(currentBalance ).when(ca).getBalance();
+		Mockito.doReturn(ca).when(bank).getCustomerAccount(2);
+		System.out.println(atm.checkAccountBalance(2, bank));
+		
+		//test: Balance returned is equal to account balance
+		assertEquals(currentBalance, atm.checkAccountBalance(2, bank));
+	}
+
+}

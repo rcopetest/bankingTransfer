@@ -1,0 +1,16 @@
+package BankOfJEE;
+
+public class Receipt {
+	int CurrentBalance;
+	int transactionAmount;
+	int transactionID;
+	
+	Receipt(){
+		
+	}
+	
+	getReceipt(){
+		return this.
+	}
+	
+}

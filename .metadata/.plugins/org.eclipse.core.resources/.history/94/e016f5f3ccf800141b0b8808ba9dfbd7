@@ -1,0 +1,14 @@
+import static org.junit.Assert.assertEquals;
+
+import org.junit.Test;
+
+
+public class checkingAccountTest {
+
+	
+	
+	@Test
+	public void () {
+		
+	}
+}

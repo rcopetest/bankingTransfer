@@ -1,0 +1,13 @@
+package BankOfJEE;
+
+public class Receipt {
+	double currentBalance;
+	int transactionAmount;
+	int transactionID;
+	
+	Receipt(double amount, boolean transactionSucess, double currentBalance){
+		this.currentBalance = currentBalance;
+		
+	}
+	
+}

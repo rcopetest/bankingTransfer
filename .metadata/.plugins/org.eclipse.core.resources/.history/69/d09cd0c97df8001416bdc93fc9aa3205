@@ -1,0 +1,16 @@
+package BankOfJEE;
+
+import CustomersOfBOJEE.Customer;
+
+public class Bank {
+	private Account account;
+	
+
+	private int getCustomerAccount(Customer customer){
+		int accountNumber = 0;
+		return accountNumber;
+	}
+	
+	
+	
+ }

@@ -1,0 +1,42 @@
+package BankOfJEE;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Random;
+
+import CustomersOfBOJEE.Customer;
+
+public class Bank {
+	//collection of banks accounts mapped to an account number
+	private Map<Integer, Account> banksAccounts;
+	
+	
+	Bank(){
+		banksAccounts = new HashMap<Integer, Account>();
+	}
+	
+	public int addAccount(Account account){
+		int generateAccountNumber = (int) (Math.random() * 1000);
+		if(!banksAccounts.containsKey(generateAccountNumber)){}
+		banksAccounts.put(generateAccountNumber, account);
+		return generateAccountNumber;
+	}
+
+	private int getCustomerAccount(Customer customer){
+		int accountNumber = 0; 
+		return accountNumber;
+	}
+	
+	public Teller getDeskTeller(){
+		Teller dTeller = new DeskTeller();
+		return dTeller;
+	}
+
+	public Teller getATMTeller(){
+		Teller ATM = new ATM();
+		return ATM;
+	}
+	
+	
+	
+ }

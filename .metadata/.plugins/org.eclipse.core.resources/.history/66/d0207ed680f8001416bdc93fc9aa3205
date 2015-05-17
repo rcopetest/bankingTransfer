@@ -1,0 +1,30 @@
+package BankOfJEE;
+
+import CustomersOfBOJEE.Customer;
+
+public class Bank {
+	private Account account;
+	
+	bank(){
+		account
+	}
+	
+
+	private int getCustomerAccount(Customer customer){
+		int accountNumber = 0; 
+		return accountNumber;
+	}
+	
+	public Teller getDeskTeller(){
+		Teller dTeller = new DeskTeller();
+		return dTeller;
+	}
+
+	public Teller getATMTeller(){
+		Teller ATM = new ATM();
+		return ATM;
+	}
+	
+	
+	
+ }

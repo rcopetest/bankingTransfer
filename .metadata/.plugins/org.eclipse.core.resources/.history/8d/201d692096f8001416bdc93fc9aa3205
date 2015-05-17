@@ -1,0 +1,23 @@
+package BankOfJEE;
+
+public class Receipt {
+	double currentBalance;
+	double amount;
+	int transactionAmount;
+	boolean transactionSuccess;
+	int transactionID;
+	
+	Receipt(double amount, boolean transactionSuccess, double currentBalance){
+		this.amount = amount;
+		this.currentBalance = currentBalance;
+		this.transactionSuccess = transactionSuccess;
+	}
+	
+	private void printReceipt(){
+		System.out.println("Transaction Request amount: " + amount);
+		System.out.println("Current Balance: " + currentBalance);
+		System.out.println("Transaction Made: " + transactionSuccess);
+	}
+
+	
+}

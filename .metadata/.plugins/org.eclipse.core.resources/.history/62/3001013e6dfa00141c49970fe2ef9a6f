@@ -1,0 +1,12 @@
+package BankOfJEE;
+
+public class invalidWithdrawRequest extends Exception {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public invalidWithdrawRequest() {
+		super("Cannot withdraw Negative amount");
+	}
+}

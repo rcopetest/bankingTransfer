@@ -1,0 +1,14 @@
+import org.junit.Test;
+
+import BankOfJEE.ATM;
+
+public class ATMTest {
+	
+	
+	@Test
+	public void testIfATMCanCheckBalance(){
+		ATM atm = new ATM();
+		atm.checkAccountBalance(2, bank)
+	}
+
+}

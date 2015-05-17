@@ -1,0 +1,55 @@
+package BankOfJEE;
+
+import CustomersOfBOJEE.Customer;
+
+public abstract class Teller {
+
+	private double currentBalance;
+	private boolean transactionSuccess;
+
+	boolean processSavingsAccCreation(Customer customer, int pin) {
+		return false;
+	}
+
+	boolean processCheckingAccCreation(Customer customer) {
+		return false;
+	}
+
+	/*
+	 * teller will take the account info and the requested amount from a
+	 * customer and process the transaction using methods in the account class
+	 */
+	
+	public Receipt processWithdrawalRequest(Account account, double amount) {
+		// teller enter amount to be withdrawal
+		if (account.withdrawAmount(amount)) {
+			currentBalance = account.getBalance();
+			transactionSuccess = true;
+		} else {
+			currentBalance = account.getBalance();
+			transactionSuccess = false;
+		}
+		Receipt transactionReceipt = new Receipt(amount, transactionSuccess,
+				currentBalance);
+		transactionReceipt.printReceipt();
+		return transactionReceipt;
+
+	}
+
+	public Receipt processDepositeRequest(int accountNumber, double amount) {
+		//if the request is valid (account.depositeAmout returns true) then 
+		//complete the transaction
+		
+		if (accountNumber.depositeAmount(amount)){
+			currentBalance = accountNumber.getBalance();
+			transactionSuccess = true;
+		} else {
+			currentBalance = accountNumber.getBalance();
+			transactionSuccess = true;
+		}
+		Receipt transactionReceipt = new Receipt(amount, transactionSuccess,
+				currentBalance);
+		transactionReceipt.printReceipt();
+		return transactionReceipt;
+	}
+}

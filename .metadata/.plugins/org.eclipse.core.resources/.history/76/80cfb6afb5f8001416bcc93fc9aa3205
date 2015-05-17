@@ -1,0 +1,34 @@
+package BankOfJEE;
+
+public abstract class Account {
+	private double balance;
+	private double pin;
+	private int accountID;
+	
+	public Account(double pin, int accountID) {
+		super();
+		this.pin = pin;
+		this.accountID = accountID;
+		this.balance = 0;
+	}
+	
+	double updateBalance(double amount){
+		return balance = balance + amount;
+	}
+	
+	void withdrawAmount(double amount){
+		if(amount > 0){
+			updateBalance(amount);
+		}
+	}
+	
+	void depositeAmount(double amount){
+		if(amount < 0){
+			updateBalance(amount);
+		}
+		
+		
+		
+	}
+	
+}

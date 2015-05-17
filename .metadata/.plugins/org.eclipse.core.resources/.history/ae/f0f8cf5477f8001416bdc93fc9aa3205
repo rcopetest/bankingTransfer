@@ -1,0 +1,53 @@
+package CustomersOfBOJEE;
+
+import BankOfJEE.Teller;
+
+public class Customer {
+	private int customerID;
+	private String customerName;
+
+	public Customer(int customerID, String customerName) {
+		super();
+		this.customerID = customerID;
+		this.customerName = customerName;
+	}
+
+	public int getCustomerID() {
+		return customerID;
+	}
+
+	public String getCustomerName() {
+		return customerName;
+	}
+	
+	public static Teller initiateAssistance(){
+		Teller teller = new Teller();
+		return teller;
+	}
+
+	boolean makeWithdrawalRequest(Customer customer, double amount, Teller teller) {
+		teller.processWithdrawalRequest(customer, amount);
+		return true;
+	}
+
+	boolean makeDepositeRequest(Customer customer, double amount) {
+		
+		return true;
+	}
+
+	void requestAccountBalance() {
+	}
+
+	boolean requestNewSavingsAccount() {
+		
+		return false;
+
+	}
+
+	boolean requestNewCheckingAccount() {
+
+		return false;
+
+	}
+
+}

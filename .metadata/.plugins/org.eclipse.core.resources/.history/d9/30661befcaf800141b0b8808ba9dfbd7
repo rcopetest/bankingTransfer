@@ -1,0 +1,20 @@
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+import BankOfJEE.Receipt;
+
+public class ReceiptTest {
+
+	/*
+	 * test to see if a receipt will print
+	 */
+	@Test
+	public void testIfReceiptPrints() {
+		Receipt rec = null;
+		rec = new Receipt(0, true, 0);
+		assertEquals(!rec.equals(null), true);
+
+	}
+
+}

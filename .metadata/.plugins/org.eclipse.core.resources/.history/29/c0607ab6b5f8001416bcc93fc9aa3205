@@ -1,0 +1,10 @@
+package BankOfJEE;
+
+public class Savings extends Account{
+
+	public Savings(double pin, int accountID) {
+		super(pin, accountID);
+		// TODO Auto-generated constructor stub
+	}
+
+}

@@ -1,0 +1,19 @@
+package BankOfJEE;
+
+import Customer.Customer;
+
+public class Teller {
+	
+	
+	boolean processSavingsAccCreation(Customer customer) {
+		
+	}
+	
+	boolean processCheckingAccCreation(Customer customer) {
+	}
+	
+	public Receipt processWithdrawalRequest(Customer customer, double amount){
+		return null;
+		
+	}
+}

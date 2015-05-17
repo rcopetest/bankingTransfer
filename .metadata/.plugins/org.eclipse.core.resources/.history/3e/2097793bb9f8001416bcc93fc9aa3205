@@ -1,0 +1,15 @@
+package BankOfJEE;
+
+public class Savings extends Account{
+
+	public Savings(double pin, int accountID) {
+		super(pin, accountID);
+	}
+
+	@Override
+	void accrueInterest() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

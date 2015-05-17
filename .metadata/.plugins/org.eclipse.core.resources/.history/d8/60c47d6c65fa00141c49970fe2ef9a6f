@@ -1,0 +1,14 @@
+package BankOfJEE;
+
+public class InsufficientFundsException extends Exception {
+
+	public InsufficientFundsException() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public InsufficientFundsException(double amount, double balance) {
+		super("Insufficient Funds: " + amount + " is unavailable \n Current balance: " + balance);
+		// TODO Auto-generated constructor stub
+	}
+}
